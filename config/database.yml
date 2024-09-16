@@ -78,13 +78,13 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+#     url: postgresql://expense_tracker_db_v3sr_user:EIODZ5dyIjQfrZFguy12cf79WHrIDbIz@dpg-crk2os3tq21c73a9cgog-a/expense_tracker_db_v3sr
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  database: expense_tracker_backend_production
-  username: expense_tracker_backend
-  password: <%= ENV["EXPENSE_TRACKER_BACKEND_DATABASE_PASSWORD"] %>
+  database: expense_tracker_db_v3sr
+  username: expense_tracker_db_v3sr_user
+  password: EIODZ5dyIjQfrZFguy12cf79WHrIDbIz
