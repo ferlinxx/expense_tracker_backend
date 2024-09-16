@@ -25,7 +25,7 @@ development:
   <<: *default
   database: expense_tracker_backend_development
   username: postgres
-  password: 123456
+  password: 243243
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,7 +61,7 @@ test:
   <<: *default
   database: expense_tracker_backend_test
   username: postgres
-  password: 123456
+  password: 243243
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -78,13 +78,14 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#     url: postgresql://expense_tracker_db_v3sr_user:EIODZ5dyIjQfrZFguy12cf79WHrIDbIz@dpg-crk2os3tq21c73a9cgog-a/expense_tracker_db_v3sr
+#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  database: expense_tracker_db_v3sr
-  username: expense_tracker_db_v3sr_user
-  password: EIODZ5dyIjQfrZFguy12cf79WHrIDbIz
+  url: <%= ENV['DATABASE_URL'] %>
+  database: mywalletdb_xr4o
+  username: mywalletdb_xr4o_user
+  password: <%= ENV["EXPENSE_TRACKER_BACKEND_DATABASE_PASSWORD"] %>
